@@ -26,5 +26,7 @@
   <h2>Hello!</h2>
 
   <p>This is <%= HelloInfo.getInfo() %>.</p>
+
+  <button type="" class="btn">Click</button>
 </body>
 </html>
