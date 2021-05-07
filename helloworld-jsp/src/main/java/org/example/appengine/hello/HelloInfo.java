@@ -17,6 +17,7 @@ package org.example.appengine.hello;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +38,8 @@ public class HelloInfo extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     String strat_name = (String) req.getAttribute("strat");
-    System.out.println(strat_name);
+     RequestDispatcher regDisp = req.getRequestDispatcher("Eingabe.jsp");
+     regDisp.include(req, resp);
   }
 }
 // [END example]
