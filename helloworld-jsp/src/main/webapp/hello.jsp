@@ -27,7 +27,7 @@
 
   <p>This is <%= HelloInfo.getInfo() %>.</p>
 
-  <form action = "main.jsp" method = "POST">
+  <form action = "hello.jsp" method = "POST">
          Name of Strategem: <input type = "text" name = "strat">
          <br />
          CP used: <input type = "text" name = "com_points_used" />
