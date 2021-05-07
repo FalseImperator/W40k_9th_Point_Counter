@@ -15,16 +15,29 @@
 
 package org.example.appengine.hello;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 // [START example]
 /**
  * Generate some simple information.
  */
-public class HelloInfo {
+public class HelloInfo extends HttpServlet {
 
   public static String getInfo() {
     return "Version: " + System.getProperty("java.version")
           + " OS: " + System.getProperty("os.name")
           + " User: " + System.getProperty("user.name");
+  }
+
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    String strat_name = (String) req.getAttribute("strat");
+    System.out.println(strat_name);
   }
 }
 // [END example]
