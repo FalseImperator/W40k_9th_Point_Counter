@@ -38,8 +38,7 @@ public class HelloInfo extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     String strat_name = (String) req.getAttribute("strat");
-     RequestDispatcher regDisp = req.getRequestDispatcher("Eingabe.jsp");
-     regDisp.include(req, resp);
+    req.getRequestDispatcher("Eingabe.jsp").forward(req, resp);;
   }
 }
 // [END example]
