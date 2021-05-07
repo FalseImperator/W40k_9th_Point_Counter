@@ -27,6 +27,11 @@
 
   <p>This is <%= HelloInfo.getInfo() %>.</p>
 
-  <button type="" class="btn">Click</button>
+  <form action = "main.jsp" method = "POST">
+         Name of Strategem: <input type = "text" name = "strat">
+         <br />
+         CP used: <input type = "text" name = "com_points_used" />
+         <input type = "submit" value = "Submit" />
+      </form>
 </body>
 </html>
